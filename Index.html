@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma Vitrine Produits - .ma</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background-color: #0078d7;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .promo-dynamique {
+            font-weight: bold;
+            color: #111;
+            font-size: 1.8em;
+            animation: clignote 1s infinite alternate;
+        }
+        .promo-secondaire {
+            font-weight: bold;
+            color: #111;
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+        @keyframes clignote {
+            from { opacity: 1; }
+            to { opacity: 0.6; }
+        }
+        .produits {
+            display: grid; /* Use grid for layout */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* At least 300px wide, 1 or more columns */
+            gap: 20px; /* Space between grid items */
+            padding: 20px;
+        }
+
+        /* Adjustments for displaying two products per line */
+        @media (min-width: 768px) { /* Apply these styles on screens wider than 768px */
+            .produits {
+                grid-template-columns: repeat(2, 1fr); /* Two columns, each taking equal space */
+            }
+        }
+
+        .carte {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.2s;
+            padding-bottom: 15px;
+            /* Removed specific margin-bottom for vertical stacking, gap handles it */
+            /* Removed max-width and auto margins as grid handles sizing */
+        }
+        .carte:hover {
+            transform: translateY(-5px);
+        }
+        .carousel {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+        }
+        .carousel a {
+            display: none;
+        }
+        .carousel a.active {
+            display: block;
+        }
+        .carousel img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        .carousel .prev,
+        .carousel .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0,0,0,0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .carousel .prev {
+            left: 10px;
+        }
+        .carousel .next {
+            right: 10px;
+        }
+        .carte h2 {
+            margin: 15px 0 5px;
+            font-size: 1.2em;
+        }
+        .carte p {
+            padding: 0 15px 15px;
+            font-size: 0.95em;
+            color: #003366;
+            font-weight: bold;
+        }
+        .btn-whatsapp {
+            display: inline-block;
+            background-color: #25D366;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .btn-whatsapp:hover {
+            background-color: #1ebc57;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="promo-dynamique">Votre satisfaction, notre mission – Offres spéciales à découvrir maintenant</div>
+        <div class="promo-secondaire">💦 Plongez dans le Bonheur – Les Meilleurs Bassins pour Enfant aux Meilleurs Prix sont Ici</div>
+    </header>
+
+    <section class="produits">
+        <div class="carte">
+            <div class="carousel" id="carousel1">
+                <a href="https://i.ebayimg.com/images/g/JdIAAOSwZb5iajfE/s-l500.jpg" target="_blank" class="active">
+                    <img src="https://i.ebayimg.com/images/g/JdIAAOSwZb5iajfE/s-l500.jpg" alt="Produit 1">
+                </a>
+                <a href="https://i.ebayimg.com/images/g/vjkAAOSwIKNiant-/s-l1600.webp" target="_blank">
+                    <img src="https://i.ebayimg.com/images/g/vjkAAOSwIKNiant-/s-l1600.webp" alt="Produit 1-2">
+                </a>
+                <a href="https://i.ebayimg.com/images/g/x7YAAOSw5mFiajsd/s-l500.jpg" target="_blank">
+                    <img src="https://i.ebayimg.com/images/g/x7YAAOSw5mFiajsd/s-l500.jpg" alt="Produit 1-3">
+                </a>
+            </div>
+            <h2>Produit 1</h2>
+<h2> PRIX </h2>
+            <p>bassin gonflable - swing enfants petit bleu  152CM x 38 CM</p>
+            <a class="btn-whatsapp" href="https://wa.me/212633006621?text=Bonjour,%20je%20suis%20intéressé%20par%20le%20Produit%201%20vu%20sur%20votre%20vitrine%20de%20produits.%20Merci." target="_blank">Commander sur WhatsApp</a>
+        </div>
+
+        <div class="carte">
+            <div class="carousel" id="carousel2">
+                <a href="https://www.poolrobots.store/media/wysiwyg/Bestway_Swing_Pool-2.jpg" target="_blank" class="active">
+                    <img src="https://www.poolrobots.store/media/wysiwyg/Bestway_Swing_Pool-2.jpg" alt="Produit 2">
+                </a>
+                <a href="https://cdn.myshoptet.com/usr/www.mountfield-export.com/user/shop/big/48-1_48-3exb0168.jpg?646725ac" target="_blank">
+                    <img src="https://cdn.myshoptet.com/usr/www.mountfield-export.com/user/shop/big/48-1_48-3exb0168.jpg?646725ac" alt="Produit 2-2">
+                </a>
+            </div>
+            <h2>Produit 2</h2>
+<h2> PRIX </h2>
+            <p>PISCINE  – 244 CM x 76 CM.</p>
+            <a class="btn-whatsapp" href="https://wa.me/212633006621" target="_blank">Commander sur WhatsApp</a>
+        </div>
+
+        <div class="carte">
+            <div class="carousel" id="carousel3">
+                <a href="https://cdn.idealo.com/folder/Product/201363/6/201363642/s1_produktbild_max_2/poolomio-swing-o-305-x-76-cm-3exb0172.jpg" class="active">
+                    <img src="https://cdn.idealo.com/folder/Product/201363/6/201363642/s1_produktbild_max_2/poolomio-swing-o-305-x-76-cm-3exb0172.jpg" alt="Produit 3">
+                </a>
+                <a href="https://cdn.idealo.com/folder/Product/201363/6/201363642/s1_produktbild_max/poolomio-swing-o-305-x-76-cm-3exb0172.jpg" target="_blank">
+                    <img src="https://cdn.idealo.com/folder/Product/201363/6/201363642/s1_produktbild_max/poolomio-swing-o-305-x-76-cm-3exb0172.jpg" alt="Produit 3-2">
+                </a>
+            </div>
+            <h2>Produit 3</h2>
+<h2> PRIX </h2>
+            <p>PISCINE Ø 305 CM x 76 CM + FILTRE GRATUIT</p>
+            <a class="btn-whatsapp" href="https://wa.me/212633006621" target="_blank">Commander sur WhatsApp</a>
+        </div>
+
+        <div class="carte">
+            <div class="carousel" id="carousel4">
+                <a href="https://www.outlet-piscinas.com/media/catalog/product/cache/1/image/650x/9df78eab33525d08d6e5fb8d27136e95/p/i/piscina-swimg-hinchada.jpg" target="_blank" class="active">
+                    <img src="https://www.outlet-piscinas.com/media/catalog/product/cache/1/image/650x/9df78eab33525d08d6e5fb8d27136e95/p/i/piscina-swimg-hinchada.jpg" alt="Produit 4-1">
+                </a>
+                <a href="https://www.outlet-piscinas.com/media/catalog/product/cache/1/image/650x/9df78eab33525d08d6e5fb8d27136e95/3/e/3exx0525_1.jpg" target="_blank">
+                    <img src="https://www.outlet-piscinas.com/media/catalog/product/cache/1/image/650x/9df78eab33525d08d6e5fb8d27136e95/3/e/3exx0525_1.jpg" alt="Produit 4-2">
+                </a>
+                <a href="https://www.outlet-piscinas.com/media/catalog/product/cache/1/image/650x/9df78eab33525d08d6e5fb8d27136e95/p/i/piscina-swimg-hinchada.jpg" target="_blank">
+                    <img src="https://www.outlet-piscinas.com/media/catalog/product/cache/1/image/650x/9df78eab33525d08d6e5fb8d27136e95/p/i/piscina-swimg-hinchada.jpg" alt="Produit 4 ajoutée 1">
+                </a>
+                <a href="https://www.outlet-piscinas.com/media/catalog/product/cache/1/image/650x/9df78eab33525d08d6e5fb8d27136e95/3/e/3exx0525_1.jpg" target="_blank">
+                    <img src="https://www.outlet-piscinas.com/media/catalog/product/cache/1/image/650x/9df78eab33525d08d6e5fb8d27136e95/3/e/3exx0525_1.jpg" alt="Produit 4 ajoutée 2">
+                </a>
+            </div>
+            <h2>Produit 4</h2>
+<h2> PRIX </h2>
+            <p>Piscine Gonflable 366 CM x 91 CM + FLITRE GRATUIT </p>
+
+            <a class="btn-whatsapp" href="https://wa.me/212633006621" target="_blank">Commander sur WhatsApp</a>
+        </div>
+
+        <div class="carte">
+    <div class="carousel" id="carousel5">
+        <a href="https://www.piscineindustrie.com/media/catalog/product/cache/0fbccb36a60c63b59d4a2bbde81987ef/p/i/piscine_transparente.png" target="_blank" class="active">
+            <img src="https://www.piscineindustrie.com/media/catalog/product/cache/0fbccb36a60c63b59d4a2bbde81987ef/p/i/piscine_transparente.png" alt="Produit 5-1">
+        </a>
+        <a href="https://cdn.myshoptet.com/usr/www.mountfield-export.com/user/shop/big/45-1_p10008304603.jpg?67220e9b" target="_blank">
+            <img src="https://cdn.myshoptet.com/usr/www.mountfield-export.com/user/shop/big/45-1_p10008304603.jpg?67220e9b" alt="Produit 5-2">
+        </a>
+    </div>
+    <h2>Piscine gonflable ronde Transparente Ø 244 CM x76 CM</h2>
+    <p>Installez simplement et rapidement cette piscine gonflable de diamètre 2.44 m x 76 cm dans votre jardin ! Idéale pour de petits espaces, cette piscine fera le bonheur des petits et des plus grands ! N'hésitez plus </p>
+    <a class="btn-whatsapp" href="https://wa.me/212633006621" target="_blank">Commander sur WhatsApp</a>
+</div>
+
+<div class="carte">
+    <div class="carousel" id="carousel6">
+        <a href="https://ibb.co/Tqgm006x" target="_blank" class="active">
+            <img src="https://cdn.idealo.com/folder/Product/201203/6/201203642/s1_produktbild_max/mountfield-swing-wicker-o-366-x-91-cm-3exb0275.jpg" alt="Produit 6-1">
+        </a>
+       
+    </div>
+    <h2> PISCINE ROTIN Ø 366 CM x 91 CM</h2>
+<h2> PRIX </h2>
+    <p>Corps de piscine en PVC super résistant à trois couches, renforcé de fibres, pour une durabilité maximale ! Il est très résistant aux rayons UV et les joints soudés qui se chevauchent sont durables.</p>
+    <a class="btn-whatsapp" href="https://wa.me/212633006621" target="_blank">Commander sur WhatsApp</a>
+</div>
+
+<div class="carte">
+    <div class="carousel" id="carousel7">
+        <a href="https://ibb.co/KcFhbZq8" target="_blank" class="active">
+            <img src="https://bricoland.ma/media/catalog/product/cache/1/thumbnail/9df78eab33525d08d6e5fb8d27136e95/b/r/bricoland_piscine_hors_sol_366x91cm_stone_design_swingpool_900-652.jpg" alt="Produit 7-1">
+        </a>
+        <a href="https://bricoland.ma/media/catalog/product/cache/1/thumbnail/9df78eab33525d08d6e5fb8d27136e95/b/r/bricoland_piscine_hors_sol_366x91cm_stone_design_swingpool-1_900-652.jpg" target="_blank">
+            <img src="https://bricoland.ma/media/catalog/product/cache/1/thumbnail/9df78eab33525d08d6e5fb8d27136e95/b/r/bricoland_piscine_hors_sol_366x91cm_stone_design_swingpool-1_900-652.jpg" alt="Produit 7-2">
+        </a>
+    </div>
+    <h2>Piscine hors sol tubulaire STONE 3.66 M x 0.91 M</h2>
+<h2> PRIX </h2>
+    <p>Vous n'avez pas besoin de voyager à des milliers de kilomètres pour nager dans une piscine ou dans la mer. Vous pouvez facilement avoir une piscine dans votre propre jardin. Passez davantage de temps avec votre famille et vos amis dans cette piscine haut de gamme.
+
+Mise en place aisée: la piscine Swing pools peut être assemblée rapidement et facilement sans avoir besoin d'outils.
+Qualité supérieure: tous les matériaux sont d’excellente qualité.
+Structure métallique résistante à la corrosion.
+Tissu bleu cristal à l'intérieur et à l'extérieur avec effet pierre..</p>
+    <a class="btn-whatsapp" href="https://wa.me/212633006621" target="_blank">Commander sur WhatsApp</a>
+</div>
+
+<div class="carte">
+    <div class="carousel" id="carousel8">
+</a>
+        <a href="https://shop.zeitlos-vertrieb.de/media/image/20/01/58/989682_25KUjX1bF5bzL5.jpg" target="_blank" class="active">
+            <img src="https://shop.zeitlos-vertrieb.de/media/image/20/01/58/989682_25KUjX1bF5bzL5.jpg" alt="Produit 8-1">
+</a>
+       
+    </div>
+    <h2>Pompe de filtration à cartouche 12 V - 1,3 m³/h pour piscines</h2>
+<h2> PRIX </h2>
+    <p>Optimisez la qualité de l'eau de votre piscine avec la Pompe de Filtration RX330 à Cartouche, débit 1.3m³/h. Compacte et efficace, elle est idéale pour les petites piscines et spas, garantissant une eau claire et saine. Facile à installer et à entretenir, cette pompe est la solution parfaite pour un entretien minimal et des performances maximales.</p>
+    <a class="btn-whatsapp" href="https://wa.me/212633006621" target="_blank">Commander sur WhatsApp</a>
+</div>
+
+<div class="carte">
+    <div class="carousel" id="carousel9">
+        <a href="https://assets.office-discount.at/img/25/31/Zoom_m2127466.jpg?width=800&height=800&impolicy=fit" target="_blank" class="active">
+            <img src="https://assets.office-discount.at/img/25/31/Zoom_m2127466.jpg?width=800&height=800&impolicy=fit" alt="Produit 9-1">
+        </a>
+        <a href="https://assets.office-discount.at/img/26/0/Zoom_m2127467.jpg?width=800&height=800&impolicy=fit" target="_blank">
+            <img src="https://assets.office-discount.at/img/26/0/Zoom_m2127467.jpg?width=800&height=800&impolicy=fit" alt="Produit 9-2">
+        </a>
+ </a>
+        <a href="https://assets.office-discount.at/img/26/1/Zoom_m2127468.jpg?width=800&height=800&impolicy=fit" target="_blank">
+            <img src="https://assets.office-discount.at/img/26/1/Zoom_m2127468.jpg?width=800&height=800&impolicy=fit" alt="Produit 9-3">
+        </a>
+
+
+    </div>
+    <h2>BESTWAY CRUSTACEAN 119 CM X 79 CM </h2>
+<h2> PRIX </h2>
+    <p>Les meilleurs bateaux gonflables pour les enfants sont d’excellents jouets pour que votre enfant puisse s’amuser pendant qu’il barbote dans la piscine.</p>
+    <a class="btn-whatsapp" href="https://wa.me/212633006621" target="_blank">Commander sur WhatsApp</a>
+</div>
+
+<div class="carte">
+    <div class="carousel" id="carousel10">
+        <a href="https://www.laboutiquedesjoyaux.fr/11871/bateau-gonflable-bebe-fish-boat.jpg" target="_blank" class="active">
+            <img src="https://www.laboutiquedesjoyaux.fr/11871/bateau-gonflable-bebe-fish-boat.jpg" alt="Produit 10-1">
+        </a>
+        <a href="https://www.laboutiquedesjoyaux.fr/13374/bateau-gonflable-bebe-fish-boat.jpg" target="_blank">
+            <img src="https://www.laboutiquedesjoyaux.fr/13374/bateau-gonflable-bebe-fish-boat.jpg" alt="Produit 10-2">
+        </a>
+    </div>
+    <h2>Bateau gonflable bébé NARVAL 118 CM X 89 CM</h2>
+    <p>A partir de 3 ans.
+
+2 en 1, ce bateau gonflable bébé Fish-Boat est l’idéal pour promener bébé dans la piscine ! Fish-Boat sert également de mini-piscine pour que votre enfant barbote dans l’eau en toute sécurité ! Sa bouille craquante en forme de narval et ses coloris flashy font de ce gonflable pour enfant un incontournable de l’été !.</p>
+    <a class="btn-whatsapp" href="https://wa.me/212633006621" target="_blank">Commander sur WhatsApp</a>
+</div>
+
+<div class="carte">
+    <div class="carousel" id="carousel11">
+        <a href="https://bricoland.ma/media/catalog/product/cache/1/thumbnail/9df78eab33525d08d6e5fb8d27136e95/b/r/bricoland_fauteuil_gonflable_bestway_900-652.jpg" target="_blank" class="active">
+            <img src="https://bricoland.ma/media/catalog/product/cache/1/thumbnail/9df78eab33525d08d6e5fb8d27136e95/b/r/bricoland_fauteuil_gonflable_bestway_900-652.jpg" alt="Produit 11-1">
+        </a>
+        <a href="https://bricoland.ma/media/catalog/product/cache/1/thumbnail/9df78eab33525d08d6e5fb8d27136e95/b/r/bricoland_fauteuil_gonflable_bestway-1_900-652.jpg" target="_blank">
+            <img src="https://bricoland.ma/media/catalog/product/cache/1/thumbnail/9df78eab33525d08d6e5fb8d27136e95/b/r/bricoland_fauteuil_gonflable_bestway-1_900-652.jpg" alt="Produit 11-2">
+        </a>
+    </div>
+    <h2>Fauteuil gonflable Lounge 102 CM x 94 CM - Bestway</h2>
+    <p>Composition du produit: -. Descriptions générales: -FAUTEUIL COUSSIN. -Dimensions: 1.02M x 94 M. -Vinyle prétesté 0.24mm. - Porte-gobelet. -Dossier avec coussin double face. -Ne convient pas aux enfants de moins de 14 ans. -Poids maximum autorisé: 90 Kg .</p>
+    <a class="btn-whatsapp" href="https://wa.me/212633006621" target="_blank">Commander sur WhatsApp</a>
+</div>
+
+
+<div class="carte">
+    <div class="carousel" id="carousel12">
+        <a href="https://i.pinimg.com/736x/4a/6a/99/4a6a99e4744b8696efaa9b30f43315fe.jpg" target="_blank" class="active">
+            <img src="https://i.pinimg.com/736x/4a/6a/99/4a6a99e4744b8696efaa9b30f43315fe.jpg" alt="Produit 12-1">
+        </a>
+        <a href="https://img.ricardostatic.ch/images/b4922924-c217-4821-bf75-768ebb2ef3e9/t_1000x750/luftmatratze-wasserhangematte" target="_blank">
+            <img src="https://img.ricardostatic.ch/images/b4922924-c217-4821-bf75-768ebb2ef3e9/t_1000x750/luftmatratze-wasserhangematte" alt="Produit 12-2">
+        </a>
+    </div>
+    <h2>MATELAS GONFLABLE 160 CM X 84 CM</h2>
+    <p>un matelas de piscine au design unique et confortable, car il est équipé d’un appui-tête qui vous offre le meilleur confort et détente.</p>
+    <a class="btn-whatsapp" href="https://wa.me/212633006621" target="_blank">Commander sur WhatsApp</a>
+</div>
+
+
+<div class="carte">
+    <div class="carousel" id="carousel13">
+        <a href="https://www.cdiscount.com/pdt2/7/9/9/1/700x700/auc1687786950799/rw/pataugeoire-gonflable-ronde-pour-enfants-piscine.jpg" target="_blank" class="active">
+            <img src="https://www.cdiscount.com/pdt2/7/9/9/1/700x700/auc1687786950799/rw/pataugeoire-gonflable-ronde-pour-enfants-piscine.jpg" alt="Produit 13-1">
+        </a>
+        <a href="https://i.sportisimo.com/products/images/70/70075/full/bestway-deep-dive-ring-pool_0.jpg" target="_blank">
+            <img src="https://i.sportisimo.com/products/images/70/70075/full/bestway-deep-dive-ring-pool_0.jpg" alt="Produit 13-2">
+        </a>
+    </div>
+    <h2>Bestway piscine gonflable ronde deep dive 3 boudins 183 CM X 33 CM </h2>
+    <p>La piscine ronde pliable adopte un sol gonflable super doux pour protéger les pieds du bébé, rendre les enfants plus amusants et faire sentir les parents plus à l'aise
+La piscine portable pour bébés peut se gonfler rapidement.</p>
+    <a class="btn-whatsapp" href="https://wa.me/212633006621" target="_blank">Commander sur WhatsApp</a>
+</div>
+
+
+
+<div class="carte">
+    <div class="carousel" id="carousel14">
+        <a href="https://poolshop.ma/wp-content/uploads/2020/09/51041-Bestway-300x250.jpeg" target="_blank" class="active">
+            <img src="https://poolshop.ma/wp-content/uploads/2020/09/51041-Bestway-300x250.jpeg" alt="Produit 14-1">
+        </a>
+        <a href="https://poolshop.ma/wp-content/uploads/2020/09/51041-Bestway-Gonflable-enfant-300x250.jpeg" target="_blank">
+            <img src="https://poolshop.ma/wp-content/uploads/2020/09/51041-Bestway-Gonflable-enfant-300x250.jpeg" alt="Produit 14-2">
+        </a>
+    </div>
+    <h2> Bestway® gonflable Piscine 3 anneaux 150 CM x 53 CM revêtement réfléchissant</h2>
+    <p>Marque : Bestway.
+- Dimensions : 150 x 53 cm.
+- Matériau : vinyle résistant prétesté.
+- 3 anneaux de même taille.
+- Coloris : extérieur : bleu ; intérieur : revêtement réfléchissant argenté.
+- Âge recommandé : à partir de 3 ans.
+</p>
+    <a class="btn-whatsapp" href="https://wa.me/212633006621" target="_blank">Commander sur WhatsApp</a>
+</div>
+
+
+<div class="carte">
+    <div class="carousel" id="carousel15">
+       
+
+<a href="https://ibb.co/NdPfPwG6"><img src="https://i.ibb.co/Xrg6gmGZ/media-2.jpg" alt="media-2" border="0"></a>
+
+
+        </a>
+        
+<a href="https://ibb.co/Ps10Q4BZ"><img src="https://i.ibb.co/Fk8CVJGb/media-1.jpg" alt="media-1" border="0"></a>
+        </a>
+    </div>
+    <h2>PISCINE POUR ENFANTS ICE CREAM 160 CM X 38 CM</h2>
+    <p>La piscine gonflable est idéale pour les enfants qui ont besoin de se rafraîchir pendant l’été. Ils peuvent éclabousser et glisser toute la journée. Le design de la piscine est fait de glaces qui feront voler l’imagination des plus petits.</p>
+    <a class="btn-whatsapp" href="https://wa.me/212633006621" target="_blank">Commander sur WhatsApp</a>
+</div>
+
+
+<div class="carte">
+    <div class="carousel" id="carousel16">
+      <a href="https://ibb.co/Hf1XkS8W"><img src="https://i.ibb.co/NdQ7HvB8/Piscine-pour-enfants-Fraises-Sweet1-768x768.jpg" alt="Piscine-pour-enfants-Fraises-Sweet1-768x768" border="0"></a>
+       
+<a href="https://ibb.co/FLzdBZKY"><img src="https://i.ibb.co/q3p2Rqdg/Piscine-pour-enfants-Fraises-Sweet5.jpg" alt="Piscine-pour-enfants-Fraises-Sweet5" border="0"></a>
+    </div>
+    <h2>Bestway® PISCINE POUR ENFANTS FRAISES 160 CM X 38 CM</h2>
+    <p>Les plus petits de la maison passeront un bon moment dans cette piscine gonflable pour enfants. Il a une conception fraise colorée amusante. Il est indiqué pour les enfants de plus de 2 ans. Il s’installe dans le jardin de manière simple.</p>
+    <a class="btn-whatsapp" href="https://wa.me/212633006621" target="_blank">Commander sur WhatsApp</a>
+</div>
+
+
+<div class="carte">
+    <div class="carousel" id="carousel17">
+     <a href="https://ibb.co/QjpfWCVy"><img src="https://i.ibb.co/mFbGnXKf/bricoland-aire-jeux-bestway-53092-900-652.jpg" alt="bricoland-aire-jeux-bestway-53092-900-652" border="0"></a>
+
+       <a href="https://ibb.co/8LPCsmr8"><img src="https://i.ibb.co/S4Vjy6tv/bricoland-aire-jeux-bestway-53092-900-652-1.jpg" alt="bricoland-aire-jeux-bestway-53092-900-652-1" border="0"></a>
+
+    </div>
+    <h2>CENTRE DE JEUX POUR ENFANTS 257 CM X 145 CM X 91 CM</h2>
+    <p>Bestway 53092. Type de piscine: Piscine gonflable, Couleur du produit: Bleu, Blanc, Age recommandé (min): 2 ans.</p>
+    <a class="btn-whatsapp" href="https://wa.me/212633006621" target="_blank">Commander sur WhatsApp</a>
+</div>
+
+
+<div class="carte">
+    <div class="carousel" id="carousel18">
+     <a href="https://ibb.co/TBCWvK6s"><img src="https://i.ibb.co/mCxNDvk3/way2.png" alt="way2" border="0"></a>
+       <a href="https://ibb.co/R46Rkk3C"><img src="https://i.ibb.co/Cs9R33bn/way4.png" alt="way4" border="0"></a>
+    </div>
+    <h2>Piscine Gonflable pour enfants avec pulvérisateur 152 × 38 cm – My first fast set – Bestway</h2>
+    <p>Cette piscine gonflable ne nécessite aucun assemblage. Sélectionnez simplement une surface plane, gonflez l’anneau supérieur et regardez la piscine monter lorsqu’elle se remplit d’eau chaque piscine a un pulvérisateur mascotte qui se trouve sur le dessus. Connectez ces pulvérisateurs à votre tuyau d’arrosage et profitez du flux constant et frais qui excitera sûrement les plus jeunes.</p>
+    <a class="btn-whatsapp" href="https://wa.me/212633006621" target="_blank">Commander sur WhatsApp</a>
+</div>
+
+
+<div class="carte">
+    <div class="carousel" id="carousel19">
+      <a href="https://ibb.co/8nH946pq"><img src="https://i.ibb.co/tw9DP8tg/bricoland-coussin-gonflable-900-652-2.png" alt="bricoland-coussin-gonflable-900-652-2" border="0"></a>
+    <a href="https://ibb.co/6RC6V3rw"><img src="https://i.ibb.co/ccnzMGk3/bricoland-coussin-gonflable-900-652-1.png" alt="bricoland-coussin-gonflable-900-652-1" border="0"></a>
+    </div>
+    <h2>Produit 19</h2>
+    <p>Ce fauteuil gonflable en forme de ballon de football géant est une excellente façon de se détendre de décorer la chambre des enfants. Le vinyle est solide, durable et testé en usine, le gonflage se fait facilement à l'aide d'une pompe à air.</p>
+    <a class="btn-whatsapp" href="https://wa.me/212633006621" target="_blank">Commander sur WhatsApp</a>
+</div>
+
+
+
+<div class="carte">
+    <div class="carousel" id="carousel20">
+       <a href="https://ibb.co/F4kttVst"><img src="https://i.ibb.co/LdDff5Qf/Centre-de-jeu-gonflable-pour-bateaux.png" alt="Centre-de-jeu-gonflable-pour-bateaux" border="0"></a>
+       <a href="https://ibb.co/nq77Sbf9"><img src="https://i.ibb.co/WNkk16FZ/Centre-de-jeu-gonflable-pour-bateaux4.png" alt="Centre-de-jeu-gonflable-pour-bateaux4" border="0"></a>
+    </div>
+    <h2>Centre de jeu gonflable pour bateaux 140 CM X 130 CM X 104 CM </h2>
+    <p>Aire de Jeu « Bateau teuf teuf » 140cm x 130cm h 104cm + 1 gouvernail + 3 poissons + 2 cannes à pêche Aire de Jeu « Bateau teuf teuf » 140 x 130 h 104 + ACC.</p>
+    <a class="btn-whatsapp" href="https://wa.me/212633006621" target="_blank">Commander sur WhatsApp</a>
+</div>
+
+
+
+<div class="carte">
+    <div class="carousel" id="carousel21">
+      <a href="https://ibb.co/spB5yPBX"><img src="https://i.ibb.co/7x9g2z90/piscinette-gonflable-candyville-91-cm-x-91-cm-x-89-cm.png" alt="piscinette-gonflable-candyville-91-cm-x-91-cm-x-89-cm" border="0"></a>
+      <a href="https://ibb.co/DfXV8h2s"><img src="https://i.ibb.co/ch5gC0nM/piscinette-gonflable-candyville-91-cm-x-91-cm-x-89-cm-6.png" alt="piscinette-gonflable-candyville-91-cm-x-91-cm-x-89-cm-6" border="0"></a>
+    </div>
+    <h2>PISCINETTE GONFLABLE CANDYVILLE 91 CM x 91 CM x 89 CM</h2>
+    <p>Pataugeoire Bestway Candyville Playtime Pool gonflable avec ombrelle pour amusement de longue durée !Cette piscinette en forme d'un plat de bonbons convient pour les enfants à partir de 2 ans. Le bain est equipé d'une ombrelle qui protège les enfants du soleil et a des parois gonflables avec percée.</p>
+    <a class="btn-whatsapp" href="https://wa.me/212633006621" target="_blank">Commander sur WhatsApp</a>
+</div>
+
+
+
+
+
+
+</section>
+
+    <footer>
+        &copy; 2025 Ma Marque. Tous droits réservés. | www.mamarque.ma
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const carousels = document.querySelectorAll('.carousel');
+
+            carousels.forEach(carousel => {
+                const images = carousel.querySelectorAll('a');
+                if (images.length > 1) {
+                    let currentImageIndex = 0;
+
+                    const prevButton = document.createElement('button');
+                    prevButton.classList.add('prev');
+                    prevButton.innerHTML = '&#10094;';
+                    carousel.appendChild(prevButton);
+
+                    const nextButton = document.createElement('button');
+                    nextButton.classList.add('next');
+                    nextButton.innerHTML = '&#10095;';
+                    carousel.appendChild(nextButton);
+
+                    function showImage(index) {
+                        images.forEach((img, i) => {
+                            if (i === index) {
+                                img.classList.add('active');
+                            } else {
+                                img.classList.remove('active');
+                            }
+                        });
+                    }
+
+                    prevButton.addEventListener('click', () => {
+                        currentImageIndex = (currentImageIndex > 0) ? currentImageIndex - 1 : images.length - 1;
+                        showImage(currentImageIndex);
+                    });
+
+                    nextButton.addEventListener('click', () => {
+                        currentImageIndex = (currentImageIndex < images.length - 1) ? currentImageIndex + 1 : 0;
+                        showImage(currentImageIndex);
+                    });
+
+                    showImage(currentImageIndex);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
